@@ -72,8 +72,8 @@ serão exibidos 20 álbuns musicais correspondestes às condições meteorológi
 Mapeamento
 
 - Se "light rain" 
-      - Género Musical = "Jazz" 
-      - Gif = "cats"
+       Género Musical = "Jazz" 
+       Gif = "cats"
 - Se "moderate rain" 
        Género Musical = "Contemporary Blues" 
        Gif = "blue cats"
