@@ -1,0 +1,26 @@
+body {
+    padding: 20px;
+}
+
+#search-form, .form-control {
+    margin-bottom: 20px;
+}
+
+.cover {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-size: cover;
+}
+
+.cover:hover {
+    cursor: pointer;
+}
+
+.cover.playing {
+    border: 5px solid #e45343;
+}
+
+.showTracks{
+	display: block;
+}

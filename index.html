@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="André Martinez; Diogo Parente; Joana Remisio">
+
+    <title>Dança da Chuva</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/spotStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+   
+
+</head>
+
+<body>
+
+    <div id="grafo"></div>
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Dança da Chuva</h1>
+                        <hr class="intro-divider">
+                        <div class="container">
+                            <center><form id="search-form" class="table">
+                                <tr>
+                                    <td style="text-align: center">
+                                        <input type="text" id="query" class="forma-rect" style="color: black" placeholder="Insira uma cidade..."/>
+                                        <input type="submit" id="search" class="btn btn-primary" value="Search" />
+                                    </td>
+                                </tr>
+                                    </form></center>
+                            <div id="buttonsToShow">
+                                <button type="button" class="btn btn-default btn-sm" id="showGraph" style="display: none"></button>
+                                <button type="button" class="btn btn-default btn-sm" id="showFS" style="display: none"></button>
+                                <button type="button" class="btn btn-default btn-sm" id="showSpotify" style="display: none"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+        <div id="titleSpot" style="display: none"><h2>Músicas sugeridas com base na meteorologia da cidade pesquisada</h2><br></div>
+        <div id="results"  style="color: white; display: none"></div>
+        <div id="FourSquare" style="display: none"></div>
+    </div>
+
+    <!-- /.intro-header -->
+    <div id="graph" style="display: none"><center><h2 style="color: white">Grafo</h2></center></div>
+
+    <center><div id="gif"></div></center>
+
+    <script id="results-template" type="text/x-handlebars-template">
+        {{#each albums.items}}
+        <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+        {{/each}}
+    </script>
+
+   
+
+</body>
+<script src="js/myscript.js"></script>
+
+
+</html>
